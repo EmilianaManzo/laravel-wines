@@ -17,13 +17,13 @@ class VinesTableSeeder extends Seeder
 
         foreach ($data as $item) {
             $new_wine = new Wine();
-            $new_wine = $item->winery;
-            $new_wine = $item->wine;
-            $new_wine = $this->makeSlug($new_wine->wine);
-            $new_wine = $item->rating_average;
-            $new_wine = $item->rating_reviews;
-            $new_wine = $item->location;
-            $new_wine = $item->image;
+            $new_wine->winery = $item->winery;
+            $new_wine->wine = $item->wine;
+            $new_wine->slug = $this->makeSlug($item->wine);
+            $new_wine->rating_average = $item->rating->average;
+            $new_wine->rating_reviews = $item->rating->reviews;
+            $new_wine->location = $item->location;
+            $new_wine->image = $item->image;
             $new_wine->save();
         }
     }
