@@ -28,5 +28,8 @@
             @endforeach
 
         </div>
+        <div class="row">
+            <div class="paginator">{{$wines->links()}}</div>
+        </div>
     </div>
 @endsection
