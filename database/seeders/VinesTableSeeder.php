@@ -19,7 +19,7 @@ class VinesTableSeeder extends Seeder
             $new_wine = new Wine();
             $new_wine = $item->winery;
             $new_wine = $item->wine;
-            $new_wine = $item->$this->makeSlug($new_wine->wine);
+            $new_wine = $this->makeSlug($new_wine->wine);
             $new_wine = $item->rating_average;
             $new_wine = $item->rating_reviews;
             $new_wine = $item->location;
