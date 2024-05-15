@@ -1,6 +1,22 @@
-<header>
-    <h1>Header</h1>
+    <header class="mb-5">
 
-    <a href="{{route('home')}}">Home</a>
-    <a href="{{route('nuova-pagina')}}">Nuova Pagina</a>
-</header>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
+        <div class="container-fluid">
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+
+            <a class="nav-link {{ Route::currentRouteName() === 'home' ? 'active' : '' }}"
+                href="{{ route('home') }}">Home</a>
+
+            </div>
+        </div>
+        </div>
+    </nav>
+
+
+
+
+    </header>
