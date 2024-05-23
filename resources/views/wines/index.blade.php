@@ -9,6 +9,7 @@
         <th scope="col">Nome vino</th>
         <th scope="col">Cantina</th>
         <th scope="col">Location</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,11 @@
           <td>{{ $wine->wine }}</td>
           <td>{{ $wine->winery }}</td>
           <td>{{ $wine->location }}</td>
+          <td>
+            <a href="{{route('wines.edit', $wine)}}" class="btn btn-warning mx-2"><i class="fa-solid fa-pencil"></i></a>
+            <a href="{{route('wines.show', $wine)}}" class="btn btn-primary mx-2"><i class="fa-solid fa-eye"></i></a>
+            @include('partials.formdelete')
+          </td>
         </tr>
         @endforeach
 

@@ -11,7 +11,7 @@ class WineRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class WineRequest extends FormRequest
         ];
     }
 
-    public function errors(){
+    public function messages(): array {
         return [
             'wine.required' => 'Il nome del vino è obbligatorio',
             'wine.min'=> 'Il campo deve avere minimo :min caratteri',
