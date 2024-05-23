@@ -8,8 +8,14 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
 
-            <a class="nav-link {{ Route::currentRouteName() === 'wines' ? 'active' : '' }}"
-                href="{{ route('wines') }}">Home</a>
+            <a class="nav-link {{ Route::currentRouteName() === 'home' ? 'active' : '' }}"
+                href="{{ route('home') }}">Home</a>
+
+            <a class="nav-link {{ Route::currentRouteName() === 'wines.index' ? 'active' : '' }}"
+                href="{{ route('wines.index') }}">Vini</a>
+
+            <a class="nav-link {{ Route::currentRouteName() === 'wines.create' ? 'active' : '' }}"
+                href="{{ route('wines.create') }}">Crea nuovo vino</a>
 
             </div>
         </div>

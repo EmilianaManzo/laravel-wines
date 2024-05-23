@@ -13,7 +13,7 @@ class PageController extends Controller
         $wines = Wine::paginate(20);
 
 
-        return view('wines', compact('wines'));
+        return view('home', compact('wines'));
     }
 
 

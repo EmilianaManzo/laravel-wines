@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use PhpParser\Node\NullableType;
 
 return new class extends Migration
 {
@@ -16,8 +17,8 @@ return new class extends Migration
             $table->string('winery');
             $table->string('wine');
             $table->string('slug');
-            $table->decimal('rating_average', 2, 1);
-            $table->string('rating_reviews');
+            $table->decimal('rating_average', 2, 1)->nullable();
+            $table->string('rating_reviews')->nullable();
             $table->string('location');
             $table->string('image');
             $table->timestamps();

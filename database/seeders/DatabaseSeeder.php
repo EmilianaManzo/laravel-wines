@@ -12,6 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        VinesTableSeeder::class;
+       $this->call( VinesTableSeeder::class);
     }
 }
